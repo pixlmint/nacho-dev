@@ -1,0 +1,18 @@
+[submodule "plugins/pixlcms-media-plugin"]
+	path = plugins/pixlcms-media-plugin
+	url = git@github.com:pixlmint/pixlcms-media-plugin.git
+[submodule "plugins/pixlcms-journal-plugin"]
+	path = plugins/pixlcms-journal-plugin
+	url = git@github.com:pixlmint/pixlcms-journal-plugin.git
+[submodule "plugins/pixlcms-wiki-plugin"]
+	path = plugins/pixlcms-wiki-plugin
+	url = git@github.com:pixlmint/pixlcms-wiki-plugin.git
+[submodule "nacho"]
+	path = nacho
+	url = git@github.com:pixlmint/Nacho.git
+[submodule "pixl-cms"]
+	path = pixl-cms
+	url = git@github.com:pixlmint/pixl-cms.git
+[submodule "parsedown"]
+	path = parsedown
+	url = git@github.com:pixlmint/parsedown.git
