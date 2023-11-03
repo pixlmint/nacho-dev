@@ -1,7 +1,7 @@
 {
     "name": "pixlmint/cms-test",
     "require": {
-        "ext-json":  "*",
+        "ext-json": "*",
         "symfony/yaml": "*",
         "symfony/polyfill-ctype": "*",
         "symfony/deprecation-contracts": "*",
@@ -9,15 +9,19 @@
         "pixlmint/pixl-cms": "*",
         "ext-gd": "*",
         "ext-exif": "*",
-        "ext-fileinfo": "*"
+        "ext-fileinfo": "*",
+        "codeception/codeception": "^5.0",
+        "codeception/module-rest": "^3.3",
+        "codeception/module-phpbrowser": "*",
+        "codeception/module-asserts": "*"
     },
     "autoload": {
         "psr-4": {
             "App\\": "src/",
             "PixlMint\\CMS\\": "pixl-cms/src",
-            "PixlMint\\MyFirstTestPlugin\\" : "plugins/my-first-test-plugin/src",
-            "PixlMint\\JournalPlugin\\" : "plugins/pixlcms-journal-plugin/src",
-            "PixlMint\\WikiPlugin\\" : "plugins/pixlcms-wiki-plugin/src",
+            "PixlMint\\MyFirstTestPlugin\\": "plugins/my-first-test-plugin/src",
+            "PixlMint\\JournalPlugin\\": "plugins/pixlcms-journal-plugin/src",
+            "PixlMint\\WikiPlugin\\": "plugins/pixlcms-wiki-plugin/src",
             "Nacho\\": "Nacho/src",
             "PixlMint\\Parsedown\\": "parsedown/src/",
             "PixlMint\\Media\\": "plugins/pixlcms-media-plugin/src/"

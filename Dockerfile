@@ -1,5 +1,8 @@
 FROM php:8.1-apache
 
+ARG UID=1000
+ARG GID=1000
+
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
 
 RUN chmod +x /usr/local/bin/install-php-extensions
@@ -28,6 +31,11 @@ RUN a2dismod mpm_event && \
   a2enmod proxy_http && \
   mv /tmp/docker/docker_entrypoint.sh /opt/docker_entrypoint.sh && \
   chmod +x /opt/docker_entrypoint.sh
+
+RUN groupadd -o -g ${GID} cms
+RUN useradd -M -N -u ${UID} -g ${GID} cms
+
+RUN cp /tmp/docker/apache2.conf /etc/apache2/apache2.conf
 
 # Cleaning up
 RUN	rm -rf /tmp/docker
