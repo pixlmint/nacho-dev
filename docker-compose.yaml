@@ -17,6 +17,12 @@ services:
         environment:
             SECRET: 'asdf'
             INI_ZEND_EXTENSION: xdebug.so
+            OPCACHE_MAX_WASTED_PERCENTAGE: 20
+            OPCACHE_JIT: 1255
+            OPCACHE_ENABLE: 1
+            OPCACHE_JIT_BUFFER_SIZE: 100M
+            OPCACHE_VALIDATE_TIMESTAMPS: 1
+            OPCACHE_INTERNED_STRINGS_BUFFER: 16
             XDEBUG_MODE: debug
             XDEBUG_CLIENT_HOST: 127.0.0.1
             XDEBUG_START_WITH_REQUEST: yes

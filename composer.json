@@ -13,7 +13,9 @@
         "codeception/module-phpbrowser": "*",
         "codeception/module-asserts": "*",
         "php-di/php-di": "^7.0",
-        "mhor/php-mediainfo": "^5.5"
+        "mhor/php-mediainfo": "^5.5",
+        "psr/log": "^3.0",
+        "ext-zend-opcache": "*"
     },
     "autoload": {
         "psr-4": {

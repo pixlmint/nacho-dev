@@ -19,13 +19,13 @@ return [
         ],
         [
             'name' => 'pixlcms-journal-plugin',
-            'enabled' => true,
+            'enabled' => false,
             'install_method' => 'source_code',
             'config' => require_once('plugins/pixlcms-journal-plugin/config/config.php'),
         ],
         [
             'name' => 'pixlcms-wiki-plugin',
-            'enabled' => false,
+            'enabled' => true,
             'install_method' => 'source_code',
             'config' => require_once('plugins/pixlcms-wiki-plugin/config/config.php'),
         ],

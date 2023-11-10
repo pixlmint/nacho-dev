@@ -10,6 +10,10 @@ do
         # Replace 'XDEBUG_' with 'xdebug.', convert rest to lowercase and append to file
         echo "${name/XDEBUG_/xdebug.}=${value}" | tr '[:upper:]' '[:lower:]' >> $OUTFILE
     fi
+    if [[ $name == OPCACHE_* ]]; then
+        # Replace 'XDEBUG_' with 'xdebug.', convert rest to lowercase and append to file
+        echo "${name/OPCACHE_/opcache.}=${value}" | tr '[:upper:]' '[:lower:]' >> $OUTFILE
+    fi
     if [[ $name == INI_* ]]; then
         echo "$name"
         echo "${name/INI_/}=${value}" | tr '[:upper:]' '[:lower:]' >> $OUTFILE
