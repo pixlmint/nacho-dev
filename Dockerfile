@@ -11,10 +11,11 @@ RUN install-php-extensions gd
 RUN install-php-extensions dbase
 RUN install-php-extensions ssh2
 RUN install-php-extensions bcmath
-RUN install-php-extensions xdebug
+RUN install-php-extensions xdebug-3.1.6
 RUN install-php-extensions exif
 RUN install-php-extensions @composer
 RUN install-php-extensions zip
+RUN install-php-extensions opcache
 
 COPY docker /tmp/docker
 RUN apt update && apt install -y wget unzip

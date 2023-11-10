@@ -15,11 +15,10 @@ services:
             - /home/christian/PhpstormProjects/journal/data:/var/www/html/data
             - ./:/var/www/html
         environment:
-            CMS_DIR: 'pixl-cms/'
             SECRET: 'asdf'
-            INI_ZEND_EXTENSION: 'xdebug.so'
-            XDEBUG_MODE: 'debug'
-            XDEBUG_CLIENT_HOST: '127.0.0.1'
-            XDEBUG_START_WITH_REQUEST: 'yes'
-            XDEBUG_DISCOVER_CLIENT_HOST: 'true'
-            XDEBUG_CLIENT_PORT: '33333'
+            INI_ZEND_EXTENSION: xdebug.so
+            XDEBUG_MODE: debug
+            XDEBUG_CLIENT_HOST: 127.0.0.1
+            XDEBUG_START_WITH_REQUEST: yes
+            XDEBUG_DISCOVER_CLIENT_HOST: true
+            XDEBUG_CLIENT_PORT: 33333

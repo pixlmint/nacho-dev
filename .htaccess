@@ -1,6 +1,8 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
+    SetEnv CMS_DIR 'pixl-cms/'
+
     # Allow access to these directories and specific files
     RewriteCond %{REQUEST_URI} ^/media/.* [OR]
     RewriteCond %{REQUEST_URI} ^/dist/.* [OR]
