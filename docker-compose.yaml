@@ -10,9 +10,6 @@ services:
         ports:
             - '94:80'
         volumes:
-            - /home/christian/PhpstormProjects/journal/content:/var/www/html/content
-            - /home/christian/PhpstormProjects/journal/media:/var/www/html/media
-            - /home/christian/PhpstormProjects/journal/data:/var/www/html/data
             - ./:/var/www/html
         environment:
             SECRET: 'asdf'

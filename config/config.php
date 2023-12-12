@@ -1,6 +1,7 @@
 <?php
 
 use App\Controller\Debug;
+use App\Controller\ParsedownTest;
 
 return [
     'routes' => [
@@ -8,6 +9,11 @@ return [
             'route' => '/api/info',
             'controller' => Debug::class,
             'function' => 'info',
+        ],
+        [
+            'route' => '/api/parsedown/test',
+            'controller' => ParsedownTest::class,
+            'function' => 'md',
         ],
     ],
     'plugins' => [
