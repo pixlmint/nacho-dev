@@ -6,3 +6,4 @@ content
 dist
 .idea
 var/*
+docker-compose.yaml

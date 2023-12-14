@@ -12,9 +12,12 @@ services:
         ports:
             - '94:80'
         volumes:
+<<<<<<< HEAD
             - /home/christian/Development/wiki/content:/var/www/html/content
             - /home/christian/Development/wiki/media:/var/www/html/media
             - /home/christian/Development/wiki/data:/var/www/html/data
+=======
+>>>>>>> ead2cc89fdc409b99f4cfd21892e7502f6233253
             - ./:/var/www/html
         environment:
             SECRET: 'asdf'
