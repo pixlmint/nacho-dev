@@ -2,6 +2,7 @@
 
 use App\Controller\Debug;
 use App\Controller\ParsedownTest;
+use PixlMint\CMS\Controllers\FrontendController;
 
 return [
     'routes' => [
@@ -15,6 +16,11 @@ return [
             'controller' => ParsedownTest::class,
             'function' => 'md',
         ],
+        [
+            'route' => '/',
+            'controller' => FrontendController::class,
+            'function' => 'index',
+        ]
     ],
     'plugins' => [
         [
@@ -41,9 +47,17 @@ return [
             'install_method' => 'source_code',
             'config' => require_once('plugins/pixlcms-media-plugin/config/config.php'),
         ],
+        [
+            'name' => 'pixlcms-kanban-plugin',
+            'enabled' => true,
+            'install_method' => 'source_code',
+            'config' => require_once('plugins/pixlcms-kanban-plugin/config/config.php'),
+        ],
     ],
     'base' => [
         'debugEnabled' => true,
+        'feVersion' => 1,
+        'feYear' => 2024,
         'frontendController' => PixlMint\CMS\Controllers\FrontendController::class,
     ],
 ];

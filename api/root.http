@@ -1,0 +1,27 @@
+###
+GET http://{{host}}/api/nav?forceReload=true
+pixltoken: {{token}}
+
+> {%
+    client.test("Request executed successfully", function () {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+###
+GET http://{{host}}/api/nav
+
+> {%
+    client.test("Request executed successfully", function () {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+###
+GET http://{{host}}/api/init
+pixltoken: {{token}}
+
+> {%
+    client.test("Request executed successfully", function () {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+###

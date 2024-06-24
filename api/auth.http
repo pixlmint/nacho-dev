@@ -1,0 +1,40 @@
+###
+POST http://localhost:94/api/auth/login
+Content-Type: application/x-www-form-urlencoded
+
+username = {{username}} &
+password = {{password}}
+
+> {%
+    client.test("Request executed successfully", function () {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+###
+
+POST http://{{host}}/api/auth/change-password
+Content-Type: application/x-www-form-urlencoded
+pixltoken: {{token}}
+
+username = {{username}} &
+currentPassword = {{password}} &
+newPassword1 = {{password}} &
+newPassword2 = {{password}} &
+generateNewToken = 1
+
+> {%
+    client.test("Request executed successfully", function () {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+###
+
+POST http://{{host}}/api/auth/destroy-secret
+pixltoken: {{token}}
+
+> {%
+    client.test("Request executed successfully", function () {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+###

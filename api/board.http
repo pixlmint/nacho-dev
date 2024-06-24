@@ -1,0 +1,49 @@
+### Create Board
+POST http://{{host}}/api/board/create
+Content-Type: application/x-www-form-urlencoded
+pixltoken: {{token}}
+
+parentPage=/&
+name=test-board
+
+> {%
+    client.test("Request executed successfully", function () {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+### Load Board
+GET http://{{host}}/api/board/load?board=/test-board
+pixltoken: {{token}}
+
+> {%
+    client.test("Request executed successfully", function () {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+### Create List
+POST http://{{host}}/api/board/list/create
+Content-Type: application/x-www-form-urlencoded
+pixltoken: {{token}}
+
+boardId=/test-board&
+name=test-list
+
+> {%
+    client.test("Request executed successfully", function () {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+
+### Create Card
+POST http://{{host}}/api/board/list/card/create
+Content-Type: application/x-www-form-urlencoded
+pixltoken: {{token}}
+
+listId=/test-board/test-list&
+name=hello2
+
+> {%
+    client.test("Request executed successfully", function () {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}

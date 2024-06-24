@@ -16,3 +16,9 @@
 [submodule "parsedown"]
 	path = parsedown
 	url = git@github.com:pixlmint/parsedown.git
+[submodule "plugins/pixlcms-kanban-plugin"]
+	path = plugins/pixlcms-kanban-plugin
+	url = git@github.com:pixlmint/pixlcms-kanban-plugin.git
+[submodule "pixlcms-wrapper"]
+    path = pixlcms-wrapper
+    url = git@github.com:pixlmint/pixlcms-wrapper

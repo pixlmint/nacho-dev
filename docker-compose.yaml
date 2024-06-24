@@ -11,9 +11,17 @@ services:
             - '94:80'
         volumes:
             - ./:/var/www/html
+            - /home/christian/Code/php/wiki/content:/var/www/html/content
+            - /home/christian/Code/php/wiki/media:/var/www/html/media
+            - /home/christian/Code/php/wiki/data:/var/www/html/data
+            - /home/christian/Code/php/wiki/public:/var/www/html/public
+            - /home/christian/Code/php/wiki/dist:/var/www/html/dist
         environment:
             SECRET: 'asdf'
             INI_ZEND_EXTENSION: xdebug.so
+            INI_MEMORY_LIMIT: 200M
+            INI_UPLOAD_MAX_FILESIZE: 200M
+            INI_POST_MAX_SIZE: 200M
             OPCACHE_MAX_WASTED_PERCENTAGE: 20
             OPCACHE_JIT: 1255
             OPCACHE_ENABLE: 1
