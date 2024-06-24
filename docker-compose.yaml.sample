@@ -6,10 +6,18 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
+            args:
+                UID: 1001
         container_name: cms
         ports:
             - '94:80'
         volumes:
+<<<<<<< HEAD
+            - /home/christian/Development/wiki/content:/var/www/html/content
+            - /home/christian/Development/wiki/media:/var/www/html/media
+            - /home/christian/Development/wiki/data:/var/www/html/data
+=======
+>>>>>>> ead2cc89fdc409b99f4cfd21892e7502f6233253
             - ./:/var/www/html
             - /home/christian/Code/php/wiki/content:/var/www/html/content
             - /home/christian/Code/php/wiki/media:/var/www/html/media

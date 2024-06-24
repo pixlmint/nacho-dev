@@ -1,0 +1,4 @@
+{
+  "debugEnabled": true,
+  "frontendController": "PixlMint\\CMS\\Controllers\\FrontendController"
+}

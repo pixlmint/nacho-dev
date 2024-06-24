@@ -23,12 +23,12 @@ return [
         ]
     ],
     'plugins' => [
-        [
-            'name' => 'my-first-test-plugin',
-            'enabled' => false,
-            'install_method' => 'source_code',
-            'config' => require_once('plugins/my-first-test-plugin/config/config.php'),
-        ],
+//        [
+//            'name' => 'my-first-test-plugin',
+//            'enabled' => false,
+//            'install_method' => 'source_code',
+//            'config' => require_once('plugins/my-first-test-plugin/config/config.php')
+//        ],
         [
             'name' => 'pixlcms-journal-plugin',
             'enabled' => false,
