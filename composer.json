@@ -29,7 +29,8 @@
             "Nacho\\": "nacho/src",
             "PixlMint\\Parsedown\\": "parsedown/src/",
             "PixlMint\\Media\\": "plugins/pixlcms-media-plugin/src/",
-            "PixlMint\\KanbanPlugin\\": "plugins/pixlcms-kanban-plugin/src/"
+            "PixlMint\\KanbanPlugin\\": "plugins/pixlcms-kanban-plugin/src/",
+            "Pontikis\\Database\\": "dacapo/src/"
         }
     },
     "require-dev": {

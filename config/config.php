@@ -53,6 +53,12 @@ return [
             'install_method' => 'source_code',
             'config' => require_once('plugins/pixlcms-kanban-plugin/config/config.php'),
         ],
+        [
+            'name' => 'pixlcms',
+            'enabled' => true,
+            'install_method' => 'source_code',
+            'config' => require_once('pixl-cms/config/config.php'),
+        ],
     ],
     'base' => [
         'debugEnabled' => true,

@@ -22,3 +22,6 @@
 [submodule "pixlcms-wrapper"]
     path = pixlcms-wrapper
     url = git@github.com:pixlmint/pixlcms-wrapper
+[submodule "nacho-db-connector-python"]
+    path = plugins/nacho-db-connector-plugin
+    url = git@github.com:pixlmint/nacho-db-connector-plugin
